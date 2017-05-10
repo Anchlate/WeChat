@@ -1,0 +1,32 @@
+//
+//  FootStep-Prefix.pch
+//  FootStep
+//
+//  Created by Qianrun on 16/12/2.
+//  Copyright © 2016年 qianrun. All rights reserved.
+//
+
+#ifndef FootStep_Prefix_pch
+#define FootStep_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#ifdef __OBJC__
+
+#import "JSONModel.h"
+#import "NSDate+ANDate.h"
+#import "CALayer+WebCache.h"
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#define RGB(A,B,C,D) [UIColor colorWithRed:A/255.0f green:B/255.0f blue:C/255.0f alpha:D]
+
+//weakself
+#define WEAKSELF(weakSelf) __weak __typeof(&*self)weakSelf = self
+
+#endif
+
+#endif /* FootStep_Prefix_pch */
